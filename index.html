@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peshwari Kitchen | Authentic Flavors</title>
+    <style>
+        /* Modern Reset & Colors */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #8B0000; /* Deep Spice Red */
+            --secondary: #D4AF37; /* Warm Gold */
+            --dark: #1A1A1A; /* Charcoal Black */
+            --light: #FDFBF7; /* Soft Off-White */
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--dark);
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .logo {
+            color: var(--secondary);
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=1200') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: var(--secondary);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+            border: 1px solid var(--secondary);
+        }
+
+        .btn:hover {
+            background-color: #a30000;
+        }
+
+        /* Features/About Section */
+        .about {
+            padding: 60px 10%;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .about h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        /* Menu Highlights */
+        .menu-preview {
+            padding: 60px 10%;
+        }
+
+        .menu-preview h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .price {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Info Section (Hours & Location) */
+        .info-section {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 60px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            border-top: 3px solid var(--secondary);
+        }
+
+        .info-box h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #777;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">Peshwari Kitchen</div>
+        <nav>
+            <a href="#about">Our Story</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Find Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Showcase -->
+    <section class="hero">
+        <h1>Experience Authentic Peshwari Cuisine</h1>
+        <p>Tradition, spice, and perfection passed down through generations. Savor the rich heritage of the North-West Frontier.</p>
+        <a href="#menu" class="btn">View Our Menu</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Welcome to Peshwari Kitchen</h2>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 18px; color: #555;">
+            We bring you the true, slow-cooked flavors of the traditional clay tandoor and iron karahi. From our signature succulent kebabs to our fluffy, golden Peshwari naan, every dish is crafted with hand-ground spices and a passion for authentic hospitality.
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-preview">
+        <h2>Chef's Recommendations</h2>
+        <div class="grid">
+            <!-- Item 1 -->
+            <div class="card">
+                <div class="card-info">
+                    <h3>Signature Peshwari Karahi</h3>
+                    <div class="price">৳ 500.00</div>
+                </div>
+            </div>
+                </div>
+                <div class="card">
+                <div class="card-info">
+                    <h3>Peshwari Beef Kebab</h3>
+                    <div class="price">৳ 350.00</div>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="card">
+                <div class="card-info">
+                    <h3>Peshwari Naan</h3>
+                    <div class="price">৳ 50.00</div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Info/Contact Section -->
+    <section id="contact" class="info-section">
+        <div class="info-box">
+            <h3>Our Location</h3>
+            <p>Road 10 House 28 Block D Banani</p>
+            <p>Daka, 1213</p>
+            <p style="margin-top: 10px;"><strong>Phone:</strong> (01979) 662 233</p>
+        </div>
+        <div class="info-box">
+            <h3>Opening Hours</h3>
+            <p>Monday - Thursday: 12:00 PM - 1:00 AM</p>
+            <p>Friday - Saturday: 12:00 PM - 1:00 AM</p>
+            <p>Sunday: 12:00 PM - 1:00 AM</p>
+        </div>
+        <div class="info-box">
+            <h3>Reservations</h3>
+            <p>Planning a family dinner or event? Give us a call or drop by to reserve a traditional floor-seating booth!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Peshwari Kitchen. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
